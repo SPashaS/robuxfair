@@ -1,14 +1,15 @@
 //====================================================================================================
-.page {
-    background: linear-gradient(180deg, #190C25 0%, #16013D 100%);
-}
 //====================================================================================================
 .page {
+    background: linear-gradient(180deg, #190C25 0%, #16013D 100%);
     // .page__main-screen
     &__main-screen {
     }
     // .page__how-buy
     &__how-buy {
+    }
+    // .page__contest
+    &__contest {
     }
 }
 //====================================================================================================
@@ -71,7 +72,6 @@
     background: linear-gradient(180deg, #190C25 0%, #16013D 100%);
     position: relative;
     @include adaptiveValue("padding-top",110,40);
-    @include adaptiveValue("padding-bottom",65,15);
     // .how-buy__wave
     &__wave {
         position: absolute;
@@ -100,7 +100,7 @@
 
     &__content {
         flex: 1 1 50%;
-        padding-right: rem(20);
+        padding-right: rem(10);
     }
 
     // .how-buy__title
@@ -175,6 +175,13 @@
                     }
                 }
             }
+            .stages-how-buy__disc {
+                @media (min-width:$mobile){
+                    &:not(:last-child) {
+                        width: rem(120);
+                    }
+                }
+            }
         }
     }
 
@@ -217,14 +224,73 @@
     // .stages-how-buy__disc
     &__disc {
         @media (min-width:$mobile){
-            width: rem(120);
+            max-width: rem(120);
         }
-        
     }
 }
 
 
 //====================================================================================================
+
+.contest {
+    @include adaptiveValue("padding-top",60,30);
+    @include adaptiveValue("padding-bottom",200,100);
+    // .contest__container
+    &__container {
+    }
+    // .contest__body
+	&__body {
+        @media (min-width:$mobile){
+            display: flex;
+            flex-direction: row-reverse;
+            gap: rem(20); 
+        }
+	}
+    // .contest__iframe
+    &__iframe {
+        flex: 1 1 50%;
+        @media (min-width:$mobile){
+            @include adaptiveValue("padding-right",75,0,1240,768);
+        }
+        
+        &-iframe-ibg {
+            padding: 0px 0px percent(509,525) 0px;
+            img {
+                border-radius: rem(15);
+            }
+        }
+    }
+
+    // .contest__content
+    &__content {
+        flex: 1 1 50%;
+    }
+
+    // .contest__title
+    &__title {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom",20,10);
+        }
+    }
+
+    // .contest__text
+    &__text {
+        max-width: rem(494);
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom",25,20);
+        }
+    }
+
+    // .contest__button
+    &__button {
+        @media (max-width:$mobile){
+            margin-bottom: rem(30); 
+        }
+    }
+}
+
+
+
 //====================================================================================================
 
 //====================================================================================================
