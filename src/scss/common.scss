@@ -1,1 +1,20 @@
 // Заголовки, общие БЄМ блоки и проче...
+.title {
+    @include adaptiveValue("font-size",56,30);
+    line-height: math.div(68,56);
+    font-weight: 700;
+    color: #fff;
+}
+
+.button {
+    min-height: rem(50);
+    background: linear-gradient(91.78deg, #9E00FF 3.77%, #6AC4F8 102.8%);
+    border-radius: rem(88);
+    display: inline-flex;
+    justify-content: center;
+    padding: rem(16) rem(50);   
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}

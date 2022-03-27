@@ -3,3 +3,242 @@
     background: linear-gradient(180deg, #190C25 0%, #16013D 100%);
 }
 //====================================================================================================
+.page {
+    // .page__main-screen
+    &__main-screen {
+    }
+    // .page__how-buy
+    &__how-buy {
+    }
+}
+//====================================================================================================
+.main-screen {
+    background: url('@img/main-screen/bg.jpg') center / cover;
+    // .main-screen__container
+    @include adaptiveValue("padding-top",109,100);
+    &__container {
+    }
+
+    // .main-screen__body
+    &__body {
+        display: flex;
+        flex-direction: column;
+        @media (min-width:$mobileSmall){
+            align-items: center;
+        }
+        
+    }
+
+    // .main-screen__title
+    &__title {
+        @include adaptiveValue("font-size",66,34);
+        max-width: rem(1000);
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom",20,15);
+        }
+        @media (min-width:$mobileSmall){
+            text-align: center;
+        }
+    }
+
+    // .main-screen__text
+    &__text {
+        max-width: rem(490);
+        &:not(:last-child) {
+            margin-bottom: rem(25);
+        }
+        @media (min-width:$mobileSmall){
+            text-align: center;
+        }
+    }
+
+    // .main-screen__button
+
+    &__button {
+    }
+
+    // .main-screen__image-ibg
+    &__image-ibg {
+        align-self: center;
+        @include adaptiveValue("margin-top",25,50);
+        @include adaptiveValue("width",1377,879);
+        @include adaptiveValue("padding-bottom",343,219);
+    }
+}
+//====================================================================================================
+
+.how-buy {
+    background: linear-gradient(180deg, #190C25 0%, #16013D 100%);
+    position: relative;
+    @include adaptiveValue("padding-top",110,40);
+    @include adaptiveValue("padding-bottom",65,15);
+    // .how-buy__wave
+    &__wave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: rem(100);
+        transform: translate(0, -100%);
+    }
+
+    // .how-buy__container
+    &__container {
+    }
+
+    // .how-buy__body
+
+    &__body {
+        @media (min-width:$mobile){
+            display: flex;
+            gap: rem(20); 
+        }
+        
+    }
+
+    // .how-buy__content
+
+    &__content {
+        flex: 1 1 50%;
+        padding-right: rem(20);
+    }
+
+    // .how-buy__title
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    // .how-buy__stages
+
+    &__stages {
+    }
+
+    // .how-buy__button
+
+    &__button {
+        @include adaptiveValue("margin-top",45,20);
+        @media (max-width:$mobileSmall){
+            width: 100%; 
+        }
+    }
+
+    // .how-buy__video
+    &__video {
+        flex: 1 1 50%;
+        text-align: center;
+    }
+    // .how-buy__video-ibg
+    &__video-ibg {
+        padding: 0px 0px percent(331,559) 0;
+    
+    }
+}
+
+.stages-how-buy {
+    gap: rem(10);
+    max-width: rem(472);
+    overflow: hidden;
+    position: relative;
+    @media (min-width:$mobile){
+        display: flex;
+    }
+    // .stages-how-buy__item
+    &__item {
+        @media (max-width:$mobile){
+            display: flex; 
+            gap: rem(10);
+            align-items: center;
+            margin-bottom: rem(15);
+        }
+        
+        &:not(:last-child) {
+            flex: 1 1 auto;
+            .stages-how-buy__stage {
+                position: relative;
+                &::after {
+                    content:'';
+                    width: calc(100% + 10px);
+                    height: rem(4);
+                    position: absolute;
+                    z-index: 0;
+                    top: rem(34);
+                    left: -5px;
+                    transform: rotate(90deg);
+                    background-color: #2F1D45;
+                    @media (min-width:$mobile){
+                        height: rem(8);
+                        left: rem(5);
+                        transform: translate(0, -50%);
+                    }
+                }
+            }
+        }
+    }
+
+    // .stages-how-buy__stage
+    &__stage {
+        @media (min-width:$mobile){
+            width: 100%;
+            margin-bottom: rem(15);
+        }
+    }
+    // .stages-how-buy__number
+	&__number {
+        width: rem(34);
+        height: rem(34);
+        font-size: rem(24);
+        @media (min-width:$mobile){
+            width: rem(66);
+            height: rem(66);
+            font-size: rem(46);
+        }
+        border-radius: 50%;
+        background: #2F1D45;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        
+        line-height: math.div(56,46);
+        span {
+            background: linear-gradient(91.78deg, #9E00FF 3.77%, #6AC4F8 102.8%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            position: relative;
+            z-index: 5;
+        }
+	}
+
+    // .stages-how-buy__disc
+    &__disc {
+        @media (min-width:$mobile){
+            width: rem(120);
+        }
+        
+    }
+}
+
+
+//====================================================================================================
+//====================================================================================================
+
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================

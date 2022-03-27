@@ -7,6 +7,70 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+				<section class="page__main-screen main-screen">
+					<div class="main-screen__container">
+						<div class="main-screen__body">
+							<h1 class="main-screen__title title">
+								Лучший магазин робуксов для тебя и друзей
+							</h1>
+							<p class="main-screen__text">
+								Покупайте робуксы по низким ценам и наслаждайтесь моментами в любимой игре
+							</p>
+							<a href="#" class="main-screen__button button">КУПИТЬ РОБУКСЫ</a>
+							<div class="main-screen__image-ibg">
+								<img src="@img/main-screen/person.png" alt="Heroes">
+							</div>
+						</div>
+					</div>
+					</section>
+					<section class="page__how-buy how-buy">
+						<div class="how-buy__wave" style="height: 100px; overflow: hidden;" >
+							<svg viewBox="0 0 1500 100" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+								<path d="M0,0 C702,212 800,-35 1500,96 L1500,100.00 L0,100 Z" style="stroke: none; fill: #190C25"></path>
+							</svg>
+						</div>
+						<div class="how-buy__container">
+							<div class="how-buy__body">
+								<div class="how-buy__content">
+									<h2 class="how-buy__title title">Как купить?</h2>
+									<ul class="how-buy__stages stages-how-buy">
+
+										<li class="stages-how-buy__item">
+											<div class="stages-how-buy__stage">
+												<div class="stages-how-buy__number">
+													<span>1</span>
+												</div>
+											</div>
+											<p class="stages-how-buy__disc">Создать Game Pass</p>
+										</li>
+										<li class="stages-how-buy__item">
+											<div class="stages-how-buy__stage">
+												<div class="stages-how-buy__number">
+													<span>2</span>
+												</div>
+											</div>
+											<p class="stages-how-buy__disc">Выбрать его на сайте</p>
+										</li>
+										<li class="stages-how-buy__item">
+											<div class="stages-how-buy__stage">
+												<div class="stages-how-buy__number">
+													<span>3</span>
+												</div>
+											</div>
+											<p class="stages-how-buy__disc">Оплата</p>
+										</li>
+									</ul>
+									<a  data-da=".how-buy__video,767.8" href="#" class="how-buy__button button">КУПИТЬ РОБУКСЫ</a>
+								</div>
+								<div class="how-buy__video">
+									<div data-popup="#popup" class="how-buy__video-ibg">
+										<img  src="@img/how-buy/poster.jpg" alt="Poster">
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
