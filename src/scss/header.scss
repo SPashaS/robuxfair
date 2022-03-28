@@ -1,8 +1,8 @@
 //====================================================================================================
 .logo {
 	img {
-		width: 148px;
-		height: 55px;
+		width: rem(148);
+		height: rem(55);
 	}
 }
 
@@ -11,6 +11,7 @@
 	top: 8px;
 	left: 0;
 	width: 100%;
+	min-width: rem(360);
 	// .header__container
 	&__container {
 	}

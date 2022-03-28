@@ -18,3 +18,98 @@
     text-transform: uppercase;
     color: #fff;
 }
+
+.stages-how-buy {
+    width: 100%;
+    position: relative;
+    @include adaptiveValue("margin-bottom",45,20);
+    @media (min-width:$mobileSmall) {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(10);
+    }
+    &::after {
+        content:'';
+        width: rem(4);
+        height: 98%;
+        position: absolute;
+        z-index: 0;
+        top: 1%;
+        left: rem(15);
+        background-color: #2F1D45;
+        @media (min-width:$mobileSmall){
+            height: rem(8);
+            width: 98%;
+            top: rem(33);
+            left: 1%;
+            transform: translate(0, -50%);
+        }
+    }
+    
+    // .stages-how-buy__item
+    &__item {
+        @media (max-width:$mobileSmall){
+            display: flex; 
+            gap: rem(10);
+            align-items: center;
+            &:not(:last-child) {
+                margin-bottom: rem(15);
+            }
+        }
+        
+        &:not(:last-child) {
+            // flex: 1 1 auto;
+            .stages-how-buy__disc {
+                @media (min-width:$mobileSmall){
+                    &:not(:last-child) {
+                        width: rem(120);
+                    }
+                }
+            }
+        }
+    }
+
+    // .stages-how-buy__stage
+    &__stage {
+        @media (min-width:$mobileSmall){
+            width: 100%;
+            margin-bottom: rem(15);
+        }
+    }
+    // .stages-how-buy__number
+	&__number {
+        width: rem(34);
+        height: rem(34);
+        font-size: rem(24);
+        @media (min-width:$mobileSmall){
+            width: rem(66);
+            height: rem(66);
+            font-size: rem(46);
+        }
+        border-radius: 50%;
+        background: #2F1D45;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        
+        line-height: math.div(56,46);
+        span {
+            background: linear-gradient(91.78deg, #9E00FF 3.77%, #6AC4F8 102.8%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            position: relative;
+            z-index: 5;
+        }
+	}
+
+    // .stages-how-buy__disc
+    &__disc {
+        @media (min-width:$mobileSmall){
+            max-width: rem(120);
+        }
+    }
+}
+

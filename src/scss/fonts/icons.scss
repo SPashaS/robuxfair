@@ -15,10 +15,30 @@
 	}
 }
 
-._icon-mail:before {
+._icon-arrow-b:before {
+	content: "\e906";
+}
+
+._icon-arrow:before {
 	content: "\e900";
-  }
-  ._icon-vk:before {
+}
+
+._icon-message:before {
 	content: "\e901";
-  }
-  
+}
+
+._icon-rub:before {
+	content: "\e902";
+}
+
+._icon-search:before {
+	content: "\e903";
+}
+
+._icon-vk:before {
+	content: "\e904";
+}
+
+._icon-warning:before {
+	content: "\e905";
+}

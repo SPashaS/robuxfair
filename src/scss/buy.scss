@@ -1,0 +1,185 @@
+.page {
+
+    // .page__buy
+
+    &__buy {
+    }
+}
+.buy {
+    @include adaptiveValue("padding-top",123,80);
+    @include adaptiveValue("padding-bottom",65,70);
+    // .buy__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+        @media (min-width:$mobileSmall){
+            align-items: center;
+        }
+        
+    }
+
+    // .buy__title
+    &__title {
+        @include adaptiveValue("margin-bottom",30,20);
+    }
+
+    // .buy__stages
+    &__stages {
+        @include adaptiveValue("margin-bottom",70,30);
+        max-width: rem(865);
+        .stages-how-buy__item {
+            position: relative;
+        }
+        .stages-how-buy__disc {
+            @media (min-width:1050px){
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: rem(170);
+                max-width: rem(170);
+                text-align: center; 
+            }
+            
+        }
+    }
+
+    // .buy__form
+    &__form {
+        @include adaptiveValue("margin-bottom",30,20);
+    }
+
+
+    // .buy__list-user
+    &__list-user {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(rem(323), 1fr));
+        gap: rem(20);
+        width: 100%;
+    }
+
+    // .buy__item-user
+    &__item-user {
+    }
+}
+
+.form-buy {
+    max-width: rem(795);
+    width: 100%;
+    position: relative;
+    // .form-buy__row
+	&__row {
+        @media (max-width:$mobileSmall){
+            @include adaptiveValue("margin-bottom",30,20);
+        }
+        @media (min-width:$mobileSmall){
+            display: flex;
+            column-gap: rem(20);
+            .form-buy__item {
+                flex: 0 1 50%;  
+            }
+        }
+	}
+    // .form-buy__item
+    &__item {
+        @include adaptiveValue("margin-bottom",30,20);
+        flex: 1 1 100%;
+        border: rem(1) solid #fff;
+        border-radius: rem(4);
+        position: relative;
+        &::before{
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            @include adaptiveValue("right",25,20);
+            transform: translate(0, -50%);
+            font-size: rem(16);
+            background: linear-gradient(91.78deg, #9E00FF 3.77%, #6AC4F8 102.8%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        &_get-rub {
+
+        }
+
+        input {
+            width: 100%;
+            height: rem(48);
+            background-color: transparent;
+            border-radius: rem(4);
+            @include adaptiveValue("padding-left",25,20);
+            @include adaptiveValue("padding-right",25,20);
+            color: inherit;
+        }
+    }
+    // .form-buy__button
+    &__button {
+        position: absolute;
+        top: 50%;
+        @include adaptiveValue("right",25,20);
+        transform: translate(0, -50%);
+        font-size: rem(24);
+    }
+}
+
+.user-card {
+    background: linear-gradient(122.91deg, #58378F 0%, #35145F 72.07%, #34005C 98.6%);
+    border-radius: 15px;
+    padding: rem(20) rem(23);
+    overflow: hidden;
+    display: flex;
+    gap: rem(19);
+    // .user-card__image
+    &__image {
+        width: rem(71);
+        height: rem(66);
+        background: #11032E;
+        border-radius: 5px;
+        text-align: center;
+        img {
+            width: rem(66);
+            height: rem(66)
+        }
+    }
+
+    // .user-card__info
+    &__info {
+    }
+
+    // .user-card__login
+
+    &__login {
+        margin-bottom: rem(1);
+        font-size: rem(20);
+        line-height: math.div(24,20);
+        font-weight:700;
+        color: #fff;
+    }
+
+    // .user-card__mail
+
+    &__mail {
+        margin-bottom: rem(4);
+    }
+
+    // .user-card__status
+
+    &__status {
+        color: #A03030;
+        font-size: rem(12);
+        line-height: math.div(15,12);
+        // .user-card__status_online
+        &_online {
+            color: #30A035;
+        }
+    }
+}
+
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
