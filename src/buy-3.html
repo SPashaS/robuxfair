@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Купить робуксы"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="page__buy buy">
+					<div class="buy__container">
+						<h1 class="buy__title title">Купить робуксы</h1>
+						<ul class="buy__stages stages-how-buy">
+							<li class="stages-how-buy__item">
+								<div class="stages-how-buy__stage">
+									<div class="stages-how-buy__number">
+										<span>1</span>
+									</div>
+								</div>
+								<p class="stages-how-buy__disc">Создать Game Pass</p>
+							</li>
+							<li class="stages-how-buy__item">
+								<div class="stages-how-buy__stage">
+									<div class="stages-how-buy__number">
+										<span>2</span>
+									</div>
+								</div>
+								<p class="stages-how-buy__disc">Выбрать его на сайте</p>
+							</li>
+							<li class="stages-how-buy__item">
+								<div class="stages-how-buy__stage">
+									<div class="stages-how-buy__number">
+										<span>3</span>
+									</div>
+								</div>
+								<p class="stages-how-buy__disc">Оплата</p>
+							</li>
+						</ul>
+						<form action="#" class="buy__form form-buy">
+							<div class="form-buy__row">
+								<div class="form-buy__item _icon-rub">
+									<input id="give-away-rub" autocomplete="off" type="number" name="form[]" placeholder=" ">
+									<label for="give-away-rub">Отдаете RUB</label>
+								</div>
+								<div class="form-buy__item form-buy__item_get-rub">
+									<input id="get-robux" autocomplete="off" type="number" name="form[]" placeholder=" ">
+									<label for="get-robux">Получаете робуксов</label>
+								</div>
+							</div>
+							<div class="form-buy__item">
+								<input id="search-user" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder=" ">
+								<label for="search-user" for="get-robux">Введите ваш никнейм</label>
+								<button type="submit" class="form-buy__button _icon-search"></button>
+							</div>
+						</form>
+						<div class="buy__user-list user-list-buy">
+							<div class="user-list-buy__header">
+								<div class="user-list-buy__card user-list-buy-card user-list-buy-card_no-bg">
+									<div class="user-card-image">
+										<img src="@img/avatars/06.png" alt="avatar">
+									</div>
+									<div class="user-list-buy-card__body">
+										<div class="user-list-buy-card__login">Qwer</div>
+										<div class="user-list-buy-card__mail">@qwer_1092</div>
+									</div>
+								</div>
+								<button class="user-list-buy__back _icon-arrow-b"></button>
+							</div>
+							<div class="user-list-buy__body">
+								<div class="user-list-buy__row">
+									<div class="user-list-buy__title">Название игры</div>
+									<ul class="user-list-buy__list">
+										<li class="user-list-buy__item user-list-buy-card">
+											<div class="user-card-image">
+												<img src="@img/avatars/01.png" alt="avatar">
+											</div>
+											<div class="user-list-buy-card__body">
+												<div class="user-list-buy-card__login">Lorem ipsum</div>
+												<div class="user-list-buy-card__robux">50</div>
+											</div>
+											<div class="user-list-buy-card__line">
+												<div class="user-list-buy-card__price">700 ₽</div>
+												<button class="user-list-buy-card__button button button_s">КУПИТЬ</button>
+											</div>
+										</li>
+										<li class="user-list-buy__item user-list-buy-card">
+											<div class="user-card-image">
+												<img src="@img/avatars/02.png" alt="avatar">
+											</div>
+											<div class="user-list-buy-card__body">
+												<div class="user-list-buy-card__login">Lorem ipsum</div>
+												<div class="user-list-buy-card__robux">50</div>
+											</div>
+											<div class="user-list-buy-card__line">
+												<div class="user-list-buy-card__price">700 ₽</div>
+												<button class="user-list-buy-card__button button button_s">КУПИТЬ</button>
+											</div>
+										</li>
+										<li class="user-list-buy__item user-list-buy-card">
+											<div class="user-card-image">
+												<img src="@img/avatars/03.png" alt="avatar">
+											</div>
+											<div class="user-list-buy-card__body">
+												<div class="user-list-buy-card__login">Lorem ipsum</div>
+												<div class="user-list-buy-card__robux">50</div>
+											</div>
+											<div class="user-list-buy-card__line">
+												<div class="user-list-buy-card__price">700 ₽</div>
+												<button class="user-list-buy-card__button button button_s">КУПИТЬ</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="user-list-buy__row">
+									<div class="user-list-buy__title">Название игры</div>
+									<ul class="user-list-buy__list">
+										<li class="user-list-buy__item user-list-buy-card">
+											<div class="user-card-image">
+												<img src="@img/avatars/04.png" alt="avatar">
+											</div>
+											<div class="user-list-buy-card__body">
+												<div class="user-list-buy-card__login">Lorem ipsum</div>
+												<div class="user-list-buy-card__robux">50</div>
+											</div>
+											<div class="user-list-buy-card__line">
+												<div class="user-list-buy-card__price">700 ₽</div>
+												<button class="user-list-buy-card__button button button_s">КУПИТЬ</button>
+											</div>
+										</li>
+										<li class="user-list-buy__item user-list-buy-card">
+											<div class="user-card-image">
+												<img src="@img/avatars/05.png" alt="avatar">
+											</div>
+											<div class="user-list-buy-card__body">
+												<div class="user-list-buy-card__login">Lorem ipsum</div>
+												<div class="user-list-buy-card__robux">50</div>
+											</div>
+											<div class="user-list-buy-card__line">
+												<div class="user-list-buy-card__price">700 ₽</div>
+												<button class="user-list-buy-card__button button button_s">КУПИТЬ</button>
+											</div>
+										</li>
+										<li class="user-list-buy__item user-list-buy-card">
+											<div class="user-card-image">
+												<img src="@img/avatars/06.png" alt="avatar">
+											</div>
+											<div class="user-list-buy-card__body">
+												<div class="user-list-buy-card__login">Lorem ipsum</div>
+												<div class="user-list-buy-card__robux">50</div>
+											</div>
+											<div class="user-list-buy-card__line">
+												<div class="user-list-buy-card__price">700 ₽</div>
+												<button class="user-list-buy-card__button button button_s">КУПИТЬ</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

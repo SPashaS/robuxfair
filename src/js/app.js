@@ -39,7 +39,7 @@ flsFunctions.menuInit();
 Документация:
 Сниппет (HTML): spollers
 */
-// flsFunctions.spollers();
+flsFunctions.spollers();
 
 /*
 Модуль работы с табами

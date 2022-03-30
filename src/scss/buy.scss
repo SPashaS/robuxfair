@@ -1,13 +1,19 @@
 .page {
 
     // .page__buy
-
     &__buy {
     }
+    // .page__instruction
+    &__instruction {
+    }
 }
+
 .buy {
     @include adaptiveValue("padding-top",123,80);
     @include adaptiveValue("padding-bottom",65,70);
+    &_2 {
+        padding-bottom: 0;
+    }
     // .buy__container
     &__container {
         display: flex;
@@ -45,7 +51,6 @@
 
     // .buy__form
     &__form {
-        @include adaptiveValue("margin-bottom",30,20);
     }
 
 
@@ -59,6 +64,14 @@
 
     // .buy__item-user
     &__item-user {
+    }
+
+    // .buy__warning-message
+    &__warning-message {
+    }
+
+    // .buy__user-list
+    &__user-list {
     }
 }
 
@@ -100,17 +113,39 @@
             text-fill-color: transparent;
         }
         &_get-rub {
-
+            &::before{
+                content:'';
+                position: absolute;
+                z-index: 2;
+                top: 50%;
+                @include adaptiveValue("right",25,20);
+                transform: translate(0, -50%);
+                background: url('@img/svg/get-robux-color.svg');
+                width: rem(18);
+                height: rem(19);
+            }
         }
-
+        label {
+            position: absolute;
+            left: rem(22);
+            top:50%;
+            transform: translateY(-50%);
+            background-color: #180A2A;
+            padding: 0 rem(3);
+            transition: all 0.4s ease 0s;
+        }
         input {
             width: 100%;
             height: rem(48);
-            background-color: transparent;
+            background-color: #180730;
             border-radius: rem(4);
             @include adaptiveValue("padding-left",25,20);
-            @include adaptiveValue("padding-right",25,20);
+            @include adaptiveValue("padding-right",65,50);
             color: inherit;
+            &:focus ~ label, 
+            &:not(:placeholder-shown) ~ label {
+                top: 0;
+            }
         }
     }
     // .form-buy__button
@@ -130,18 +165,7 @@
     overflow: hidden;
     display: flex;
     gap: rem(19);
-    // .user-card__image
-    &__image {
-        width: rem(71);
-        height: rem(66);
-        background: #11032E;
-        border-radius: 5px;
-        text-align: center;
-        img {
-            width: rem(66);
-            height: rem(66)
-        }
-    }
+    
 
     // .user-card__info
     &__info {
@@ -177,8 +201,225 @@
 }
 
 //====================================================================================================
+
+.warning-message {
+    background-color: #160239;
+    border: rem(1) solid #A03030;
+    padding: rem(30) rem(50);
+    text-align: center;
+    max-width: rem(795);
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom",30,20);
+    }
+    &::before{
+        color: #A03030;
+        @include adaptiveValue("font-size",27,21);
+        position: absolute;
+        @include adaptiveValue("top",10,15);
+        @include adaptiveValue("right",10,15);
+    }
+    // .warning-message__title
+
+    &__title {
+        color: #A03030;
+        padding: 0px 0px rem(5) 0px;
+        font-weight: 700;
+        font-size: rem(20);
+    }
+
+    // .warning-message__text
+    &__text {
+    }
+}
+
 //====================================================================================================
+
+.instruction {
+    @include adaptiveValue("padding-top",40,70);
+    @include adaptiveValue("padding-bottom",90,70);
+    // .instruction__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .instruction__title
+    &__title {
+        margin-bottom: rem(20);
+    }
+
+    // .instruction__video
+    &__video {
+        border-radius: 15px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+}
 //====================================================================================================
+.user-list-buy {
+    padding-top: rem(20);
+    @include adaptiveValue("padding-left",33,20);
+    @include adaptiveValue("padding-right",33,20);
+    @include adaptiveValue("padding-bottom",70,25);
+    background: linear-gradient(122.91deg, #58378F 0%, #35145F 72.07%, #34005C 98.6%);
+    border-radius: rem(15);
+    width: 100%;
+    // .user-list-buy__header
+    &__header {
+        padding-bottom: rem(17);
+        border-bottom: rem(1) solid #2F1D45;
+        display: flex;
+        gap: rem(20);
+        justify-content: space-between;
+        align-items: start;
+    }
+    // .user-list-buy__card
+    &__card {
+        
+    }
+    // .user-list-buy__back
+	&__back {
+        &::before{
+            @include adaptiveValue("font-size",35.7,24.7);
+            transition: transform 0.3s ease 0s;
+        }
+        
+        @media (any-hover: hover){
+            &:hover{
+                &::before{
+                    transform: translateX(-3px);
+                }
+            }
+        }
+	}
+
+
+    // .user-list-buy__body
+    &__body {
+        padding-top: rem(30);
+    }
+
+    // .user-list-buy__row
+    &__row {
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    // .user-list-buy__title
+    &__title {
+        font-weight: 700;
+        @include adaptiveValue("font-size",28,20);
+        line-height: math.div(34,28);
+        color: #fff;
+        @include adaptiveValue("margin-bottom",15,20);
+    }
+
+    // .user-list-buy__list
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+        gap: rem(20);
+    }
+
+    // .user-list-buy__item
+    &__item {
+    }
+}
+.user-list-buy-card {
+    background: #352152;
+    border-radius: 15px;
+    padding: rem(20) rem(25) rem(25) rem(20);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: rem(10);
+    row-gap: rem(12);
+    &_no-bg {
+        background: transparent;
+        padding: 0;
+    }
+    @media (min-width:$pc){
+        row-gap: rem(6);
+    }
+
+    .user-card-image {
+        grid-area: 1/1/2/2;
+        @include adaptiveValue("width",73,49);
+        @include adaptiveValue("height",67.86,45.55);
+        @media (min-width:$pc){
+            grid-area: 1/1/3/2; 
+        }
+        img{
+            @include adaptiveValue("width",67.86,45.55);
+        @include adaptiveValue("height",67.86,45.55);
+        }
+    }
+    
+
+    // .user-list-buy-card__body
+    &__body {
+        grid-area: 1/2/2/3;
+        
+    }
+
+    // .user-list-buy-card__login
+    &__login {
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: rem(6);
+    }
+
+    // .user-list-buy-card__mail
+    &__mail {
+    }
+
+    // .user-list-buy-card__robux
+    &__robux {
+        display: inline-flex;
+        gap: rem(2);
+        &::before{
+            content:'';
+            background: url('@img/svg/get-robux-gray.svg');
+            width: rem(16);
+            height: rem(16);
+        }
+    }
+
+    // .user-list-buy-card__line
+    &__line {
+        grid-area: 2/1/3/3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(10);
+        @media (min-width:$pc){
+            grid-area: 2/2/3/3;
+        }
+    }
+
+    // .user-list-buy-card__price
+    &__price {
+        font-weight: 700;
+        font-size: rem(20);
+        color: #6CB9F8;
+    }
+
+    // .user-list-buy-card__button
+    &__button {
+        margin-left: auto;
+    }
+}
+
+
+
 //====================================================================================================
 //====================================================================================================
 //====================================================================================================

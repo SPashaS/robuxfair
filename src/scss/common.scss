@@ -12,11 +12,29 @@
     border-radius: rem(88);
     display: inline-flex;
     justify-content: center;
+    align-items: center;
     padding: rem(16) rem(50);   
     letter-spacing: 0.05em;
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+    &_s {
+        min-height: rem(40);
+        padding: rem(5) rem(33); 
+    }
+}
+
+// .user-card__image
+.user-card-image {
+    width: rem(71);
+    height: rem(66);
+    background: #11032E;
+    border-radius: 5px;
+    text-align: center;
+    img {
+        width: rem(66);
+        height: rem(66)
+    }
 }
 
 .stages-how-buy {
