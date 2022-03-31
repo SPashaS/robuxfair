@@ -18,6 +18,44 @@
     &__wave {
     }
 }
+
+//====================================================================================================
+.confetti {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    // .confetti_1
+    &_1 {
+        top: -37%;
+        right: 9%;
+    }
+    &_2 {
+        top: -16%;
+        right: 51%;
+    }
+    &_3 {
+        bottom: -24%;
+        left: -5%;
+    }
+    &_4 {
+        top: -9%;
+        right: -3%;
+    }
+    &_5 {
+        bottom: 0%;
+        right: 17%;
+    }
+    &_6 {
+        top: -4%;
+        left: -7%;
+    }
+    &_7 {
+        bottom: -10%;
+        right: -8%;
+    }
+}
+
+
 //====================================================================================================
 .main-screen {
     background: url('@img/main-screen/bg.jpg') center / cover;
@@ -120,14 +158,16 @@
 }
 //====================================================================================================
 .how-buy {
-    @include adaptiveValue("padding-top",110,40);
+    @include adaptiveValue("padding-top",110,83);
     @include adaptiveValue("padding-bottom",60,50);
     // .how-buy__container
     &__container {
+        
     }
 
     // .how-buy__body
     &__body {
+        position: relative;
         @media (min-width:$mobile){
             display: flex;
             gap: rem(20); 
@@ -179,8 +219,7 @@
     }
     // .how-buy__video-ibg
     &__video-ibg {
-        padding: 0px 0px percent(331,559) 0;
-    
+        
     }
 }
 
@@ -191,9 +230,11 @@
     @include adaptiveValue("padding-bottom",100,70);
     // .contest__container
     &__container {
+        
     }
     // .contest__body
 	&__body {
+        position: relative;
         @media (min-width:$mobile){
             display: flex;
             flex-direction: row-reverse;
@@ -263,6 +304,7 @@
     &__body {
         display: flex;
         flex-direction: column;
+        position: relative;
     }
 
     // .statistics__title

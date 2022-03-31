@@ -8,6 +8,7 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
 [class*="_icon-"] {
 	&:before {
 		@extend %ic;
@@ -41,4 +42,8 @@
 
 ._icon-warning:before {
 	content: "\e905";
+}
+
+._icon-play:before {
+	content: "\e907";
 }

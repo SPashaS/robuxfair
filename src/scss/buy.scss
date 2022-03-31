@@ -6,6 +6,10 @@
     // .page__instruction
     &__instruction {
     }
+    // .page__how-create
+
+    &__how-create {
+    }
 }
 
 .buy {
@@ -418,9 +422,36 @@
     }
 }
 
-
-
 //====================================================================================================
+
+.create {
+    @include adaptiveValue("padding-top",40,70);
+    @include adaptiveValue("padding-bottom",90,70);
+    // .create__container
+    &__container {
+    }
+
+    // .create__title
+
+    &__title {
+        margin-bottom: rem(20);
+        @media (min-width:$mobileSmall){
+            text-align: center;
+        }
+    }
+
+    // .create__video
+    &__video {
+        max-width: rem(590);
+        margin: 0 auto;
+    }
+
+    // .create__video-ibg
+    &__video-ibg {
+    }
+}
+
+
 //====================================================================================================
 //====================================================================================================
 //====================================================================================================

@@ -89,35 +89,6 @@
 
 	// .menu__link-button
 	&__button {
-		display: inline-block;
-		position: relative;
-		text-transform: uppercase;
-		font-weight: 700;
-		font-size: 12px;
-		line-height: 15px;
-		letter-spacing: 0.05em;
-		border-radius: 22px;
-		padding: 15px 32px;
-		white-space: nowrap;
-		
-		background-image: url("../img/footer/border-bottom.svg");
-		background-size: 100% 100%;
-		// $border: 2px;
-		// color: #FFF;
-		// background: #190C25;
-		// background-clip: padding-box;
-		// border: $border solid transparent;
-		// border-radius: 22px;
-
-		// &:before {
-		// 	content: '';
-		// 	position: absolute;
-		// 	top: 0; right: 0; bottom: 0; left: 0;
-		// 	z-index: -1;
-		// 	margin: -$border;
-		// 	border-radius: inherit; 
-		// 	background: linear-gradient(91.78deg, #9E00FF 3.77%, #6AC4F8 102.8%);;
-		// }
 	}
 
 	// .menu__icon

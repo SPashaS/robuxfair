@@ -66,6 +66,9 @@
             @media (max-width:860px){
                 margin-bottom: 10px;
             }
+            @media (max-width:$mobileSmall){
+                width: 100%; 
+            }
         }
         &:nth-child(6){
             grid-area: privacy;

@@ -1,9 +1,29 @@
 // Заголовки, общие БЄМ блоки и проче...
 .title {
-    @include adaptiveValue("font-size",56,30);
-    line-height: math.div(68,56);
+    @include adaptiveValue("font-size", 56, 30);
+    line-height: math.div(68, 56);
     font-weight: 700;
     color: #fff;
+}
+
+.main-button {
+	display: block;
+	position: relative;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 700;
+    font-size: rem(12);
+    line-height: math.div(15,12);
+	letter-spacing: 0.05em;
+    border-radius: rem(22);
+    padding: rem(15) rem(32);
+	white-space: nowrap;
+	background-image: url("@img/footer/border-bottom.svg");
+	background-size: 100% 100%;
+	transition: color 0.3s ease 0s;
+	&:hover{
+		color: #9E00FF;
+	}
 }
 
 .button {
@@ -13,14 +33,15 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: rem(16) rem(50);   
+    padding: rem(16) rem(50);
     letter-spacing: 0.05em;
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+
     &_s {
         min-height: rem(40);
-        padding: rem(5) rem(33); 
+        padding: rem(5) rem(33);
     }
 }
 
@@ -31,6 +52,7 @@
     background: #11032E;
     border-radius: 5px;
     text-align: center;
+
     img {
         width: rem(66);
         height: rem(66)
@@ -40,14 +62,19 @@
 .stages-how-buy {
     width: 100%;
     position: relative;
-    @include adaptiveValue("margin-bottom",45,20);
+    @media (max-width:$mobile){
+        @include adaptiveValue("margin-bottom", 45, 20);
+    }
+    
+
     @media (min-width:$mobileSmall) {
         display: flex;
         justify-content: space-between;
         gap: rem(10);
     }
+
     &::after {
-        content:'';
+        content: '';
         width: rem(4);
         height: 98%;
         position: absolute;
@@ -55,7 +82,8 @@
         top: 1%;
         left: rem(15);
         background-color: #2F1D45;
-        @media (min-width:$mobileSmall){
+
+        @media (min-width:$mobileSmall) {
             height: rem(8);
             width: 98%;
             top: rem(33);
@@ -63,22 +91,22 @@
             transform: translate(0, -50%);
         }
     }
-    
+
     // .stages-how-buy__item
     &__item {
-        @media (max-width:$mobileSmall){
-            display: flex; 
+        @media (max-width:$mobileSmall) {
+            display: flex;
             gap: rem(10);
             align-items: center;
+
             &:not(:last-child) {
                 margin-bottom: rem(15);
             }
         }
-        
+
         &:not(:last-child) {
-            // flex: 1 1 auto;
             .stages-how-buy__disc {
-                @media (min-width:$mobileSmall){
+                @media (min-width:$mobileSmall) {
                     &:not(:last-child) {
                         width: rem(120);
                     }
@@ -89,29 +117,33 @@
 
     // .stages-how-buy__stage
     &__stage {
-        @media (min-width:$mobileSmall){
+        @media (min-width:$mobileSmall) {
             width: 100%;
             margin-bottom: rem(15);
         }
     }
+
     // .stages-how-buy__number
-	&__number {
+    &__number {
         width: rem(34);
         height: rem(34);
         font-size: rem(24);
-        @media (min-width:$mobileSmall){
+
+        @media (min-width:$mobileSmall) {
             width: rem(66);
             height: rem(66);
             font-size: rem(46);
         }
+
         border-radius: 50%;
         background: #2F1D45;
         display: flex;
         justify-content: center;
         align-items: center;
         font-weight: 700;
-        
-        line-height: math.div(56,46);
+
+        line-height: math.div(56, 46);
+
         span {
             background: linear-gradient(91.78deg, #9E00FF 3.77%, #6AC4F8 102.8%);
             -webkit-background-clip: text;
@@ -121,13 +153,19 @@
             position: relative;
             z-index: 5;
         }
-	}
+    }
 
     // .stages-how-buy__disc
     &__disc {
-        @media (min-width:$mobileSmall){
+        @media (min-width:$mobileSmall) {
             max-width: rem(120);
         }
     }
 }
+
+.video-ibg {
+    border-radius: rem(15);
+    overflow: hidden;
+}
+
 

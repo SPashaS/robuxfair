@@ -69,6 +69,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
-		"simplebar": "latest"
+		"simplebar": "latest",
+		"vlitejs": "^4.0.4"
 	}
 }
