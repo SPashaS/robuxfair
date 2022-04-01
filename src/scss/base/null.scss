@@ -81,3 +81,7 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
+
+*:focus {
+	outline: #9E00FF auto rem(1);
+}

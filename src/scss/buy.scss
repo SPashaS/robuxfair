@@ -20,12 +20,15 @@
     }
     // .buy__container
     &__container {
+        
+    }
+    &__body {
+        position: relative;
         display: flex;
         flex-direction: column;
         @media (min-width:$mobileSmall){
             align-items: center;
         }
-        
     }
 
     // .buy__title
@@ -57,6 +60,10 @@
     &__form {
     }
 
+    // .buy__list-wrapper
+	&__list-wrapper {
+        position: relative;
+	}
 
     // .buy__list-user
     &__list-user {
@@ -85,10 +92,10 @@
     position: relative;
     // .form-buy__row
 	&__row {
-        @media (max-width:$mobileSmall){
+        @media (max-width:$mobile){
             @include adaptiveValue("margin-bottom",30,20);
         }
-        @media (min-width:$mobileSmall){
+        @media (min-width:$mobile){
             display: flex;
             column-gap: rem(20);
             .form-buy__item {
@@ -100,12 +107,12 @@
     &__item {
         @include adaptiveValue("margin-bottom",30,20);
         flex: 1 1 100%;
-        border: rem(1) solid #fff;
-        border-radius: rem(4);
+        // border: rem(1) solid #fff;
+        // border-radius: rem(2);
         position: relative;
-        &::before{
+        &::before {
             position: absolute;
-            z-index: 2;
+            z-index: 3;
             top: 50%;
             @include adaptiveValue("right",25,20);
             transform: translate(0, -50%);
@@ -116,11 +123,22 @@
             background-clip: text;
             text-fill-color: transparent;
         }
+        &::after{
+            content:'';
+            position: absolute;
+            top: rem(-1);
+            right: rem(-1);
+            bottom: rem(-1);
+            left: rem(-1);
+            background: linear-gradient(91.78deg, #9E00FF 3.77%, #6AC4F8 102.8%);
+            border-radius: rem(4);
+            z-index: 0;
+        }
         &_get-rub {
             &::before{
                 content:'';
                 position: absolute;
-                z-index: 2;
+                z-index: 3;
                 top: 50%;
                 @include adaptiveValue("right",25,20);
                 transform: translate(0, -50%);
@@ -131,6 +149,7 @@
         }
         label {
             position: absolute;
+            z-index: 3;
             left: rem(22);
             top:50%;
             transform: translateY(-50%);
@@ -146,6 +165,8 @@
             @include adaptiveValue("padding-left",25,20);
             @include adaptiveValue("padding-right",65,50);
             color: inherit;
+            position: relative;
+            z-index: 2;
             &:focus ~ label, 
             &:not(:placeholder-shown) ~ label {
                 top: 0;
@@ -155,6 +176,7 @@
     // .form-buy__button
     &__button {
         position: absolute;
+        z-index: 3;
         top: 50%;
         @include adaptiveValue("right",25,20);
         transform: translate(0, -50%);
@@ -267,6 +289,7 @@
 }
 //====================================================================================================
 .user-list-buy {
+    position: relative;
     padding-top: rem(20);
     @include adaptiveValue("padding-left",33,20);
     @include adaptiveValue("padding-right",33,20);
@@ -431,6 +454,9 @@
     &__container {
     }
 
+    &__body {
+        position: relative;
+    }
     // .create__title
 
     &__title {

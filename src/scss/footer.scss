@@ -2,17 +2,10 @@
 .footer {
     background-color: #170337;
     color: #D8DBEC;
-    padding-top: 35px;
-    padding-bottom: 28px;
-    font-size: 14px;
-    line-height: 17px;
-    @media (min-width:860px) {
-        padding-top: 43px;
-        padding-bottom: 30px; 
-        font-size: 16px;
-        line-height: 19px;
-    }
-
+    @include adaptiveValue("padding-top",43,25);
+    @include adaptiveValue("padding-bottom",30,28);
+    @include adaptiveValue("font-size",16,14);
+    line-height: math.div(19,16);
     // .footer__container
     &__container {
     }
@@ -24,47 +17,47 @@
         grid-template-areas: 'logo' 'nav' 'social' 'pay' 'button' 'privacy' 'copy';
         grid-template-columns: 1fr;
         justify-items: center; 
-        @media (min-width:860px) {
+        @media (min-width:$mobile) {
             grid-template-areas: 'logo nav social button' 'copy privacy pay button';
             grid-template-columns: 19% 29.5% 202px 188px;
             justify-content: space-between; 
             justify-items: self-start;
-        }   
+        }
     }
 
     // .footer__item
     &__item {
         &:nth-child(1){
             grid-area: logo;
-            @media (max-width:860px){
-                margin-bottom: 13px;
+            @media (min-width:$mobile) {
+                margin-bottom: rem(13);
             }
         }
         &:nth-child(2){
             grid-area: nav;
-            @media (min-width:860px){
-                padding-top: 3px;
+            @media (min-width:$mobile) {
+                padding-top: rem(3);
             }
         }
         &:nth-child(3){
             grid-area: social;
-            @media (min-width:860px){
-                padding-top: 2px;
+            @media (min-width:$mobile) {
+                padding-top: rem(2);
             }
-            @media (max-width:860px){
-                margin-bottom: 10px;
+            @media (max-width:$mobile) {
+                margin-bottom: rem(10);
             }
         }
         &:nth-child(4){
             grid-area: pay;
-            @media (max-width:860px){
-                margin-bottom: 10px;
+            @media (max-width:$mobile) {
+                margin-bottom: rem(10);
             }
         }
         &:nth-child(5){
             grid-area: button;
-            @media (max-width:860px){
-                margin-bottom: 10px;
+            @media (max-width:$mobile) {
+                margin-bottom: rem(10);
             }
             @media (max-width:$mobileSmall){
                 width: 100%; 
@@ -72,34 +65,34 @@
         }
         &:nth-child(6){
             grid-area: privacy;
-            @media (max-width:860px){
-                margin-bottom: 10px;
+            @media (max-width:$mobile) {
+                margin-bottom: rem(10);
             }
         }
         &:nth-child(7){
             grid-area: copy;
-            @media (min-width:860px){
-                padding-top: 2px;
+            @media (min-width:$mobile) {
+                padding-top: rem(2);
             }
         }
     }
 
     // .footer__logo
     &__logo {
-        @media (max-width:860px){
+        @media (max-width:$mobile) {
 			img {
-				width: 122px;
-				height: 45px;
+				width: rem(122);
+				height: rem(45);
 			}
 		}
     }
     // .footer__nav
 	&__nav {
         display: flex;
-        gap: 30px;
-        @media (min-width:860px){
+        gap: rem(30);
+        @media (min-width:$mobile) {
 			flex-direction: column;
-			gap: 4px;
+			gap: rem(4);
 		}
 	}
 	// .footer__nav-item
@@ -136,17 +129,17 @@
 .social-footer {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: rem(5);
     align-items: center;
-    @media (min-width:860px){
+    @media (min-width:$mobile) {
         align-items: flex-start;
     }
     // .social-footer__item
     &__item {
-        @media (min-width:860px){
+        @media (min-width:$mobile) {
 			&:first-child {
                 .social-footer__image {
-                    padding-left: 2px;
+                    padding-left: rem(2);
                 }
             }
 		}
@@ -162,8 +155,8 @@
     }
     // .social-footer__image
 	&__image {
-        flex: 0 0 30px;
-        font-size: 14px;
+        flex: 0 0 rem(30);
+        font-size: rem(14);
 	}
     // .social-footer__value
 	&__value {
@@ -175,9 +168,9 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 11px;
-    @media (min-width: 860px){
-        max-width: 185px;
+    gap: rem(11);
+    @media (min-width:$mobile) {
+        max-width: rem(185);
         justify-content: flex-start;
     }
     // .payment-footer__item

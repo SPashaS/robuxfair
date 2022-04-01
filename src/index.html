@@ -1,146 +1,139 @@
 <!DOCTYPE html>
-<html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Верстка «NEW_PROJECT_NAME»</title>
+	</head>
 	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-				<section class="page__main-screen main-screen">
-					<div class="main-screen__container">
-						<div class="main-screen__body">
-							<h1 class="main-screen__title title">
-								Лучший магазин робуксов для тебя и друзей
-							</h1>
-							<p class="main-screen__text">
-								Покупайте робуксы по низким ценам и наслаждайтесь моментами в любимой игре
-							</p>
-							<a href="#" class="main-screen__button button">КУПИТЬ РОБУКСЫ</a>
-							<div class="main-screen__image-ibg">
-								<img src="@img/main-screen/person.png" alt="Heroes">
-							</div>
-						</div>
-					</div>
-				</section>
-				<div class="page__wave wave">
-					<div class="wave__top">
-						<svg viewBox="0 0 1500 100" preserveAspectRatio="none">
-							<path d="M0,0 C702,212 800,-35 1500,96 L1500,100.00 L0,100 Z"></path>
-						</svg>
-					</div>
-					<section class="page__how-buy how-buy">
-							<div class="how-buy__container">
-								<div class="how-buy__body" data-prlx-mouse-wrapper>
-									<span class="confetti confetti_1" data-prlx-mouse data-prlx-cx="2" data-prlx-cy="4" data-prlx-a="4">
-										<img src="@img/confetti/01.svg" alt="1">
-									</span>
-									<span class="confetti confetti_2" data-prlx-mouse data-prlx-cx="2" data-prlx-cy="4" data-prlx-a="4">
-										<img src="@img/confetti/02.svg" alt="2">
-									</span>
-									<span class="confetti confetti_3" data-prlx-mouse data-prlx-cx="2" data-prlx-cy="4" data-prlx-a="4">
-										<img src="@img/confetti/03.svg" alt="3">
-									</span>
-									<div class="how-buy__content">
-										<h2 class="how-buy__title title">Как купить?</h2>
-										<ul class="how-buy__stages stages-how-buy">
-											<li class="stages-how-buy__item">
-												<div class="stages-how-buy__stage">
-													<div class="stages-how-buy__number">
-														<span>1</span>
-													</div>
-												</div>
-												<p class="stages-how-buy__disc">Создать Game Pass</p>
-											</li>
-											<li class="stages-how-buy__item">
-												<div class="stages-how-buy__stage">
-													<div class="stages-how-buy__number">
-														<span>2</span>
-													</div>
-												</div>
-												<p class="stages-how-buy__disc">Выбрать его на сайте</p>
-											</li>
-											<li class="stages-how-buy__item">
-												<div class="stages-how-buy__stage">
-													<div class="stages-how-buy__number">
-														<span>3</span>
-													</div>
-												</div>
-												<p class="stages-how-buy__disc">Оплата</p>
-											</li>
-										</ul>
-
-										<a data-da=".how-buy__video,767.8" href="#" class="how-buy__button button">КУПИТЬ РОБУКСЫ</a>
-									</div>
-									<div class="how-buy__video">
-										<div class="how-buy__video-ibg video-ibg">
-											<video id="player" class="vlite-js" src="./files/video/robux.mp4"></video>
-										</div>
-									</div>
-								</div>
-							</div>
-					</section>
-					<section class="page__contest contest">
-							<div class="contest__container">
-								<div class="contest__body" data-prlx-mouse-wrapper>
-									<span class="confetti confetti_4" data-prlx-mouse data-prlx-cx="2" data-prlx-cy="4" data-prlx-a="4">
-										<img src="@img/confetti/04.svg" alt="4">
-									</span>
-									<span class="confetti confetti_5" data-prlx-mouse data-prlx-cx="2" data-prlx-cy="4" data-prlx-a="4">
-										<img src="@img/confetti/05.svg" alt="5">
-									</span>
-									<div class="contest__content">
-										<h2 class="contest__title title">Участвуй<br>в конкурсе</h2>
-										<p class="contest__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore </p>
-										<a href="#" class="contest__button button">ОТКРЫТЬ КОНКУРС</a>
-									</div>
-									<div class="contest__iframe">
-										<div class="contest__iframe-iframe-ibg">
-											<img src="@img/contest/image.jpg" alt="Contest">
-										</div>
-									</div>
-								</div>
-							</div>
-							
-					</section>
-					<div class="wave__bottom" >
-						<svg viewBox="0 0 1500 100" preserveAspectRatio="none">
-							<path d="M0,0 C702,212 900,-155 1500,96 L1500,0 L0,0 Z"></path>
-						</svg>
-					</div>
-				</div>
-				<section class="page__statistics statistics">
-						<div class="statistics__container">
-							<div class="statistics__body" data-prlx-mouse-wrapper>
-								<span class="confetti confetti_6" data-prlx-mouse data-prlx-cx="2" data-prlx-cy="4" data-prlx-a="4">
-									<img src="@img/confetti/06.svg" alt="6">
-								</span>
-								<span class="confetti confetti_7" data-prlx-mouse data-prlx-cx="2" data-prlx-cy="4" data-prlx-a="4">
-									<img src="@img/confetti/07.svg" alt="7">
-								</span>
-								<h2 class="statistics__title title">Статистика</h2>
-								<div class="statistics__grid">
-									<div class="statistics__item">
-										<div class="statistics__value">167.249 R$</div>
-										<div class="statistics__item"><span>Доступно сейчас</span></div>
-									</div>
-									<div class="statistics__item">
-										<div class="statistics__value">33.047.698 R$</div>
-										<div class="statistics__item">Продано за всё время</div>
-									</div>
-									<div class="statistics__item">
-										<div class="statistics__value">144</div>
-										<div class="statistics__item">Онлайн на сайте</div>
-									</div>
-								</div>
-								<a href="#" class="statistics__button button">КУПИТЬ РОБУКСЫ</a>
-							</div>
-						</div>
-				</section>
-			</main>
-			@@include('html/_footer.htm',{})
+		<div class="rootpage">
+			<h1>Верстка «NEW_PROJECT_NAME»</h1>
+			<div class="rootpage__info">
+			</div>
+			<h2>Готовые страницы:</h2>
+			<ol class="rootpage__list">
+				<li><a target="_blank" href="home.html">Home</a></li>
+				<li><a target="_blank" href="buy.html">Buy 1</a></li>
+				<li><a target="_blank" href="buy-2.html">Buy 2</a></li>
+				<li><a target="_blank" href="buy-3.html">Buy 3</a></li>
+				<li><a target="_blank" href="faq.html">FAQ</a></li>
+			</ol>
+			
 		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
 	</body>
+	<style>
+		@charset "UTF-8";
+		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+		* ,*::before, *::after {
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+			box-sizing: border-box; 
+		}
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			min-width: 320px;
+			width: 100%;
+			color: #1f1f1f;
+			background-color: #ffff;
+		}
+		body {
+			font-family: Montserrat;
+			font-size: 100%;
+			line-height: 1;
+			font-size: 1.5rem;
+		}
+		a {
+			text-decoration: none;
+			color: rgba(153, 0, 0, 0.726);
+		}
+		a:visited {
+			text-decoration: underline;
+			color: rgba(24, 24, 24, 0.726);
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		ul li {
+			list-style: none;
+		}
+		img {
+			vertical-align: top;
+		}
+		.wrapper {
+			width: 100%;
+			min-height: 100%;
+			overflow: hidden;
+		}
+		.rootpage{
+			padding: 30px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		@media (max-width: 767px) {
+			.rootpage{
+				padding:30px 15px;
+			}
+		}
+		h1 {
+			color: #1f1f1f;
+			font-size: 2.5rem;
+			margin: 0px 0px 1.25rem 0px;
+		}
+		@media (max-width: 767px) {
+			h1 {
+				font-size: 1.85rem;
+				margin: 0px 0px 1.25rem 0px;
+			}
+		}
+		h2 {
+			color: #1f1f1f;
+			font-size: 1.25rem;
+			margin: 0px 0px 1rem 0px;
+		}
+		@media (max-width: 767px) {
+			h2 {
+				font-size: 1.125rem;
+				margin: 0px 0px 1rem 0px;
+			}
+		}
+		.rootpage__info{
+			line-height: 140%;
+			margin: 0px 0px 1.5rem 0px;
+		}
+
+		.rootpage__list{
+			margin: 0px 0px 2.25rem 1.25rem;
+		}
+		.rootpage__list li:not(:last-child){
+			margin: 0px 0px 15px 0px;
+		}
+		.rootpage__contacts,
+		.rootpage__tnx{
+			border-radius: 200px;
+			padding: 20px 65px;
+			line-height: 140%;
+		}
+		@media (max-width: 767px){
+		.rootpage__contacts,
+		.rootpage__tnx{
+			border-radius:40px;
+			padding: 20px;
+		}
+		}
+		.rootpage__contacts{
+			background: #32b5a4;
+			
+		}
+		.rootpage__contacts a{
+			color: #ebe691;
+		}
+		.rootpage__tnx{
+			background: #c22d63;
+			margin: 0px 0px 1rem 0px;
+		}
+	</style>
 </html>

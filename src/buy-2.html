@@ -9,70 +9,83 @@
 			<main class="page">
 				<section class="page__buy buy buy_2">
 					<div class="buy__container">
-						<h1 class="buy__title title">Купить робуксы</h1>
-						<ul class="buy__stages stages-how-buy">
-							<li class="stages-how-buy__item">
-								<div class="stages-how-buy__stage">
-									<div class="stages-how-buy__number">
-										<span>1</span>
+						<div class="buy__body">
+							<span class="confetti confetti_8" data-prlx-mouse data-prlx-cx="2" data-prlx-cy="4" data-prlx-a="4">
+								<img src="@img/confetti/01.svg" alt="1">
+							</span>
+							<span class="confetti confetti_9" data-prlx-mouse data-prlx-cx="2" data-prlx-cy="4" data-prlx-a="4">
+								<img src="@img/confetti/02.svg" alt="2">
+							</span>
+							<h1 class="buy__title title">Купить робуксы</h1>
+							<ul class="buy__stages stages-how-buy">
+								<li class="stages-how-buy__item">
+									<div class="stages-how-buy__stage">
+										<a href="./buy.html" class="stages-how-buy__number">
+											<span>1</span>
+										</a>
+									</div>
+									<p class="stages-how-buy__disc">Создать Game Pass</p>
+								</li>
+								<li class="stages-how-buy__item">
+									<div class="stages-how-buy__stage">
+										<a href="./buy-2.html" class="stages-how-buy__number">
+											<span>2</span>
+										</a>
+									</div>
+									<p class="stages-how-buy__disc">Выбрать его на сайте</p>
+								</li>
+								<li class="stages-how-buy__item">
+									<div class="stages-how-buy__stage">
+										<a href="./buy-3.html" class="stages-how-buy__number">
+											<span>3</span>
+										</a>
+									</div>
+									<p class="stages-how-buy__disc">Оплата</p>
+								</li>
+							</ul>
+							<form action="#" class="buy__form form-buy">
+								<div class="form-buy__row">
+									<div class="form-buy__item _icon-rub">
+										<input id="give-away-rub" autocomplete="off" type="number" name="form[]" placeholder=" ">
+										<label for="give-away-rub">Отдаете RUB</label>
+									</div>
+									<div class="form-buy__item form-buy__item_get-rub">
+										<input id="get-robux" autocomplete="off" type="number" name="form[]" placeholder=" ">
+										<label for="get-robux">Получаете робуксов</label>
 									</div>
 								</div>
-								<p class="stages-how-buy__disc">Создать Game Pass</p>
-							</li>
-							<li class="stages-how-buy__item">
-								<div class="stages-how-buy__stage">
-									<div class="stages-how-buy__number">
-										<span>2</span>
-									</div>
+								<div class="form-buy__item">
+									<input id="search-user" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder=" ">
+									<label for="search-user" for="get-robux">Введите ваш никнейм</label>
+									<button type="submit" class="form-buy__button _icon-search"></button>
 								</div>
-								<p class="stages-how-buy__disc">Выбрать его на сайте</p>
-							</li>
-							<li class="stages-how-buy__item">
-								<div class="stages-how-buy__stage">
-									<div class="stages-how-buy__number">
-										<span>3</span>
-									</div>
-								</div>
-								<p class="stages-how-buy__disc">Оплата</p>
-							</li>
-						</ul>
-						<form action="#" class="buy__form form-buy">
-							<div class="form-buy__row">
-								<div class="form-buy__item _icon-rub">
-									<input id="give-away-rub" autocomplete="off" type="number" name="form[]" placeholder=" ">
-									<label for="give-away-rub">Отдаете RUB</label>
-								</div>
-								<div class="form-buy__item form-buy__item_get-rub">
-									<input id="get-robux" autocomplete="off" type="number" name="form[]" placeholder=" ">
-									<label for="get-robux">Получаете робуксов</label>
-								</div>
+							</form>
+							<div class="buy__warning-message warning-message _icon-warning">
+								<p class="warning-message__title">Внимание!</p>
+								<p class="warning-message__text">
+									Пользователь с таким никнеймом не найден!
+								</p>
 							</div>
-							<div class="form-buy__item">
-								<input id="search-user" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder=" ">
-								<label for="search-user" for="get-robux">Введите ваш никнейм</label>
-								<button type="submit" class="form-buy__button _icon-search"></button>
+							<div class="buy__warning-message warning-message _icon-warning">
+								<p class="warning-message__title">Внимание!</p>
+								<p class="warning-message__text">
+									У выбранного пользователя нет никаких созданных пассов
+								</p>
 							</div>
-						</form>
-						<div class="buy__warning-message warning-message _icon-warning">
-							<p class="warning-message__title">Внимание!</p>
-							<p class="warning-message__text">
-								Пользователь с таким никнеймом не найден!
-							</p>
-						</div>
-						<div class="buy__warning-message warning-message _icon-warning">
-							<p class="warning-message__title">Внимание!</p>
-							<p class="warning-message__text">
-								У выбранного пользователя нет никаких созданных пассов
-							</p>
 						</div>
 					</div>
 				</section>
 				<section class="page__how-create create">
 					<div class="create__container">
-						<h2 class="create__title title">Как создать?</h2>
-						<div class="create__video">
-							<div class="create__video-ibg video-ibg">
-								<video id="player" class="vlite-js" src="./files/video/robux.mp4"></video>
+						<div class="create__body">
+							<span class="confetti confetti_12" data-prlx-mouse data-prlx-cx="2" data-prlx-cy="4" data-prlx-a="4">
+								<img src="@img/confetti/07.svg" alt="1">
+							</span>
+							<h2 class="create__title title">Как создать?</h2>
+							<div class="create__video">
+								<div class="create__video-ibg video-ibg">
+									<video id="player" class="vlite-js" src="./files/video/robux.mp4"></video>
+								</div>
 							</div>
 						</div>
 					</div>

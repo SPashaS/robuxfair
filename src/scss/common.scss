@@ -20,15 +20,25 @@
 	white-space: nowrap;
 	background-image: url("@img/footer/border-bottom.svg");
 	background-size: 100% 100%;
-	transition: color 0.3s ease 0s;
-	&:hover{
-		color: #9E00FF;
+    background-position: rem(1);
+    span {
+        transition: color 0.3s ease 0s;
+    }
+	
+	&:hover {
+        span {
+            color: #6AC4F8;
+        }
+        
 	}
 }
 
 .button {
     min-height: rem(50);
     background: linear-gradient(91.78deg, #9E00FF 3.77%, #6AC4F8 102.8%);
+    // background: linear-gradient(to left, #9E00FF,#6AC4F8,#9E00FF );
+    background-size: 150%;
+    background-position: 50% 50%;
     border-radius: rem(88);
     display: inline-flex;
     justify-content: center;
@@ -38,10 +48,35 @@
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
-
+    transform-style: preserve-3d;
+    transform: perspective(rem(1000));
+    span {
+        transform: translateZ(rem(10));
+    }
+    // transition: all 0.6s ease 0s;
     &_s {
         min-height: rem(40);
         padding: rem(5) rem(33);
+    }
+
+    @media (any-hover: hover){
+        &:hover{
+            animation: blockanimate 3s ease alternate infinite;
+            @keyframes blockanimate {
+            0% {
+                background-position: 50% 50%;
+            }
+            33% {
+                background-position: 100% 50%;
+            }
+            66% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 50% 50%;
+            }
+    }
+        }
     }
 }
 
@@ -148,8 +183,6 @@
             background: linear-gradient(91.78deg, #9E00FF 3.77%, #6AC4F8 102.8%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
             position: relative;
             z-index: 5;
         }

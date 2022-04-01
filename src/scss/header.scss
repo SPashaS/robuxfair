@@ -9,7 +9,7 @@
 .header {
 	position: absolute;
 	z-index: 10;
-	top: 8px;
+	top: rem(8);
 	left: 0;
 	width: 100%;
 	min-width: rem(360);
@@ -18,23 +18,23 @@
 	}
 	// .header__body
 	&__body {
-		padding-right: 4px;
+		padding-right: rem(4);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		min-height: 60px;
-		@media (min-width:768px){
-			min-height: 68px;
-			padding-right: 0px;
+		min-height: rem(60);
+		@media (min-width:$mobile){
+			min-height: rem(68);
+			padding-right: 0;
 		}
 	}
 	// .header__logo
 	&__logo {
 		align-self: flex-start;
-		@media (max-width:768px){
+		@media (max-width:$mobile){
 			img {
-				width: 114px;
-				height: 43px;
+				width: rem(114);
+				height: rem(43);
 			}
 		}
 	}
@@ -44,13 +44,12 @@
 	}
 }
 .menu {
-	
 	// .menu__list
 	&__list {
 		display: flex;
 		align-items: center;
-		gap: 46px;
-		@media (max-width:768px){
+		gap: rem(46);
+		@media (max-width:$mobile){
 			position: fixed;
 			top: 0;
 			left: -100%;
@@ -74,16 +73,14 @@
 
 	// .menu__link
 	&__link {
-		font-size: 16px;
-		line-height: 19px;
 		transition: color 0.3s ease 0s;
-		padding: 5px 0;
+		padding: rem(5) 0;
 		&:hover {
 			color: #9E00FF;
 		}
-		@media (max-width:768px){
-			font-size: 23px;
-			line-height: 33px;
+		@media (max-width:$mobile){
+			font-size: rem(23);
+			line-height: math.div(33,23);
 		}
 	}
 
@@ -104,10 +101,10 @@
 	display: none;
 	@media (max-width: $mobile) {
 		display: block;
-		width: 37px;
-		height: 34px;
-		padding: 10px;
-		margin-right: -10px;
+		width: rem(37);
+		height: rem(34);
+		padding:rem(10);
+		margin-right: rem(-10);
 		cursor: pointer;
 		position: relative;
 		z-index: 15;
@@ -123,15 +120,15 @@
 				left: 0px;
 				position: absolute;
 				width: 100%;
-				height: 2px;
+				height: rem(2);
 				background-color: #fff;
-				border-radius: 1px;
+				border-radius: rem(1);
 			}
 			&::before {
-				top: 0px;
+				top: 0;
 			}
 			&::after {
-				bottom: 0px;
+				bottom: 0;
 			}
 			span {
 				top: calc(50% - 1px);

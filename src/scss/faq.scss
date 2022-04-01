@@ -11,6 +11,7 @@
     }
 }
 .faq {
+    position: relative;
     @include adaptiveValue("padding-top",158,77);
     @include adaptiveValue("padding-bottom",120,60);
     // .faq__container
@@ -18,9 +19,9 @@
     &__container {
     }
 
-    // .faq__tilte
+    // .faq__title
 
-    &__tilte {
+    &__title {
         @include adaptiveValue("margin-bottom",38,20);
         @media (min-width:$mobile){
             text-align: center; 
@@ -47,6 +48,7 @@
     }
     // .item-faq__title
     &__title {
+        cursor: pointer;
         font-weight: 700;
         font-size: rem(20);
         color: #fff;
@@ -80,14 +82,16 @@
 
 .why-we {
     @include adaptiveValue("padding-bottom",120,70);
+    position: relative;
     // .why-we__container
 
     &__container {
     }
 
-    // .why-we__tilte
+    // .why-we__title
 
-    &__tilte {
+    &__title {
+        @include adaptiveValue("margin-bottom",40,20);
         @media (min-width:$mobile){
             text-align: center; 
         }
