@@ -20,80 +20,6 @@
 }
 
 //====================================================================================================
-.confetti {
-    position: absolute;
-    z-index: 0;
-    pointer-events: none;
-    // .confetti_1
-    &_1 {
-        top: -37%;
-        right: 9%;
-    }
-    &_2 {
-        top: -16%;
-        right: 51%;
-    }
-    &_3 {
-        bottom: -24%;
-        left: -5%;
-    }
-    &_4 {
-        top: -9%;
-        right: -3%;
-    }
-    &_5 {
-        bottom: 0%;
-        right: 17%;
-    }
-    &_6 {
-        top: -4%;
-        left: -7%;
-    }
-    &_7 {
-        bottom: -10%;
-        right: -8%;
-    }
-    &_8 {
-        top: 14%;
-        left: -2%;
-    }
-    &_9 {
-        top: 25%;
-        right: 1%;
-    }
-    &_10 {
-        top: -5%;
-        left: -8%;
-    }
-    &_11 {
-        top: -7%;
-        right: -10%;
-    }
-    &_12 {
-        top: -45%;
-        right: -20%;
-    }
-    &_13 {
-        top: -7%;
-        left: -10%;
-    }
-    &_14 {
-        top: -10%;
-        right: -10%;
-    }
-    &_15 {
-        top: 12%;
-        right: 46%;
-    }
-    &_15 {
-        top: 2%;
-        right: 6%;
-    }
-    &_16 {
-        top: 2%;
-        left: 6%;
-    }
-}
 
 
 //====================================================================================================
@@ -155,8 +81,10 @@
 .wave {
     background: linear-gradient(180deg, #190C25 0%, #16013D 100%);
     position: relative;
+    z-index: 1;
     &__top {
         position: absolute;
+        z-index: 1;
         top: 0;
         left: 0;
         width: 100%;
@@ -198,7 +126,7 @@
 }
 //====================================================================================================
 .how-buy {
-    @include adaptiveValue("padding-top",110,83);
+    @include adaptiveValue("padding-top",110,43);
     @include adaptiveValue("padding-bottom",60,50);
     // .how-buy__container
     &__container {
@@ -275,6 +203,7 @@
     // .contest__body
 	&__body {
         position: relative;
+        z-index: 3;
         @media (min-width:$mobile){
             display: flex;
             flex-direction: row-reverse;
@@ -299,6 +228,10 @@
     // .contest__content
     &__content {
         flex: 1 1 50%;
+        @media (max-width:$mobile){
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     // .contest__title
@@ -322,6 +255,7 @@
             width: 100%; 
         }
         @media (max-width:$mobile){
+            align-self: center;
             margin-bottom: rem(30); 
         }
     }
@@ -335,7 +269,7 @@
     @include adaptiveValue("padding-bottom",100,70);
     background: linear-gradient(122.91deg, #201081 0%, #1E0043 72.07%, #5C003E 98.6%);
     position: relative;
-
+    z-index: 0;
     // .statistics__container
     &__container {
     }

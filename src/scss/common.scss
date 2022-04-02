@@ -1,4 +1,125 @@
 // Заголовки, общие БЄМ блоки и проче...
+.confetti {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    @media (min-width:$tablet){
+        &::before{
+            content:'';
+            display: block;
+        }
+        // .confetti_1
+        &_1 {
+            top: -37%;
+            right: 9%;
+            &::before{
+                background: url('@img/confetti/01.svg');
+                transform: rotate(150deg);
+                width: rem(113);
+                height: rem(82);
+            }
+        }
+        &_2 {
+            top: -16%;
+            right: 51%;
+            &::before{
+                background: url('@img/confetti/02.svg');
+                width: rem(118);
+                height: rem(57);
+            }
+        }
+        &_3 {
+            bottom: -21%;
+            left: -8%;
+            &::before{
+                background: url('@img/confetti/01.svg');
+                width: rem(113);
+                height: rem(82);
+            }
+        }
+        &_4 {
+            top: -9%;
+            right: -3%;
+            &::before{
+                background: url('@img/confetti/03.svg');
+                width: rem(77);
+                height: rem(91);
+            }
+        }
+        &_5 {
+            bottom: 0%;
+            right: 17%;
+            &::before{
+                background: url('@img/confetti/04.svg');
+                width: rem(60);
+                height: rem(68);
+            }
+        }
+        &_6 {
+            top: -4%;
+            left: -7%;
+            &::before{
+                background: url('@img/confetti/03.svg');
+                transform: rotate(-90deg);
+                width: rem(77);
+                height: rem(91);
+            }
+        }
+        &_7 {
+            bottom: -10%;
+            right: -8%;
+            &::before{
+                background: url('@img/confetti/01.svg');
+                transform: rotate(30deg);
+                width: rem(113);
+                height: rem(82);
+            }
+        }
+        &_8 {
+            top: 14%;
+            left: -2%;
+        }
+        &_9 {
+            top: 25%;
+            right: 1%;
+        }
+        &_10 {
+            top: -5%;
+            left: -8%;
+        }
+        &_11 {
+            top: -7%;
+            right: -10%;
+        }
+        &_12 {
+            top: -45%;
+            right: -20%;
+        }
+        &_13 {
+            top: -7%;
+            left: -10%;
+        }
+        &_14 {
+            top: -10%;
+            right: -10%;
+        }
+        &_15 {
+            top: 12%;
+            right: 46%;
+        }
+        &_15 {
+            top: 2%;
+            right: 6%;
+        }
+        &_16 {
+            top: 2%;
+            left: 6%;
+        } 
+    }
+}
+
+
+
 .title {
     @include adaptiveValue("font-size", 56, 30);
     line-height: math.div(68, 56);

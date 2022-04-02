@@ -19,7 +19,8 @@
         justify-items: center; 
         @media (min-width:$mobile) {
             grid-template-areas: 'logo nav social button' 'copy privacy pay button';
-            grid-template-columns: 19% 29.5% 202px 188px;
+            // grid-template-columns: 19% 29.5% 202px 188px;
+            grid-template-columns: 21% 23.5% rem(202) rem(188);
             justify-content: space-between; 
             justify-items: self-start;
         }
