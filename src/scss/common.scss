@@ -1,17 +1,16 @@
 // Заголовки, общие БЄМ блоки и проче...
 .confetti {
     position: absolute;
-    z-index: -1;
-    pointer-events: none;
-    @media (min-width:$tablet){
+    z-index: 0;
+    @media (min-width:$mobile){
         &::before{
             content:'';
             display: block;
         }
         // .confetti_1
         &_1 {
-            top: -37%;
-            right: 9%;
+            top: rem(-127);
+            right: rem(111);
             &::before{
                 background: url('@img/confetti/01.svg');
                 transform: rotate(150deg);
@@ -20,8 +19,8 @@
             }
         }
         &_2 {
-            top: -16%;
-            right: 51%;
+            top: rem(-55);
+            right: rem(604);
             &::before{
                 background: url('@img/confetti/02.svg');
                 width: rem(118);
@@ -29,8 +28,8 @@
             }
         }
         &_3 {
-            bottom: -21%;
-            left: -8%;
+            bottom: rem(-65);
+            left: rem(-90);
             &::before{
                 background: url('@img/confetti/01.svg');
                 width: rem(113);
@@ -38,8 +37,8 @@
             }
         }
         &_4 {
-            top: -9%;
-            right: -3%;
+            top: rem(-31);
+            right: rem(-26);
             &::before{
                 background: url('@img/confetti/03.svg');
                 width: rem(77);
@@ -47,8 +46,8 @@
             }
         }
         &_5 {
-            bottom: 0%;
-            right: 17%;
+            bottom: 0;
+            right: rem(130);
             &::before{
                 background: url('@img/confetti/04.svg');
                 width: rem(60);
@@ -56,8 +55,8 @@
             }
         }
         &_6 {
-            top: -4%;
-            left: -7%;
+            top: rem(-14);
+            left: rem(-40);
             &::before{
                 background: url('@img/confetti/03.svg');
                 transform: rotate(-90deg);
@@ -66,8 +65,8 @@
             }
         }
         &_7 {
-            bottom: -10%;
-            right: -8%;
+            bottom: rem(-18);
+            right: rem(-87);
             &::before{
                 background: url('@img/confetti/01.svg');
                 transform: rotate(30deg);
@@ -76,44 +75,98 @@
             }
         }
         &_8 {
-            top: 14%;
-            left: -2%;
+            top: rem(79);
+            left: rem(-10);
+            &::before{
+                background: url('@img/confetti/01.svg');
+                transform: rotate(150deg);
+                width: rem(113);
+                height: rem(82);
+            }
         }
         &_9 {
-            top: 25%;
-            right: 1%;
+            top: rem(91);
+            right: rem(72);
+            &::before{
+                background: url('@img/confetti/04.svg');
+                transform: rotate(135deg);
+                width: rem(60);
+                height: rem(68);
+            }
         }
         &_10 {
-            top: -5%;
-            left: -8%;
+            top: rem(-5);
+            left: rem(-80);
+            &::before{
+                background: url('@img/confetti/04.svg');
+                width: rem(60);
+                height: rem(68);
+            }
         }
         &_11 {
-            top: -7%;
-            right: -10%;
+            top: rem(-41);
+            right: rem(-100);
+            &::before{
+                background: url('@img/confetti/02.svg');
+                width: rem(118);
+                height: rem(57);
+            }
         }
+        //qweqweqwe
         &_12 {
-            top: -45%;
-            right: -20%;
+            top: rem(-50);
+            right: rem(-300);
+            &::before{
+                background: url('@img/confetti/02.svg');
+                width: rem(118);
+                height: rem(57);
+            }
         }
         &_13 {
-            top: -7%;
-            left: -10%;
+            top: rem(-77);
+            left: rem(-83);
+            &::before{
+                background: url('@img/confetti/04.svg');
+                width: rem(60);
+                height: rem(68);
+            }
         }
         &_14 {
-            top: -10%;
-            right: -10%;
+            top: rem(-110);
+            right: rem(-110);
+            &::before{
+                background: url('@img/confetti/02.svg');
+                width: rem(118);
+                height: rem(57);
+            }
         }
         &_15 {
-            top: 12%;
-            right: 46%;
-        }
-        &_15 {
-            top: 2%;
-            right: 6%;
+            top: rem(-22);
+            left: rem(458);
+            &::before{
+                background: url('@img/confetti/04.svg');
+                width: rem(60);
+                height: rem(68);
+            }
         }
         &_16 {
-            top: 2%;
-            left: 6%;
+            top: rem(60);
+            right: rem(7);
+            &::before{
+                background: url('@img/confetti/02.svg');
+                width: rem(118);
+                height: rem(57);
+            }
+        }
+        &_17 {
+            top: rem(-19);
+            left: rem(45);
+            &::before{
+                background: url('@img/confetti/01.svg');
+                transform: rotate(30deg);
+                width: rem(113);
+                height: rem(82);
+            }
         } 
     }
 }

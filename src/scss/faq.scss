@@ -3,11 +3,14 @@
     // .page_faq
     &_faq {
         background: linear-gradient(122.91deg, #201081 0%, #1E0043 72.07%, #5C003E 98.6%);
+        .page__how-buy {
+            @include adaptiveValue("padding-top",110,83);
+        }
     }
 
      // .page__why-we
-
     &__why-we {
+        
     }
 }
 .faq {
